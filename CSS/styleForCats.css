@@ -1,0 +1,45 @@
+/*CSS reset settings here*/
+*{
+ margin: 0px;
+ padding: 0px;
+}
+#wrapper{
+ width: 750px;
+ background-color: silver;
+ margin: 0px auto;
+}
+#header{
+ height: 100px;
+ text-align: center;
+ font-size: 2em;
+ font-weight: bold;
+}
+div.imgCol > img{
+    width: 85%;
+    margin: auto;
+    height: 20%;
+    padding: 10px;
+    border: 2px solid black;
+
+
+}
+#mainContent{
+    padding-left: 10px;
+    margin:auto;
+}
+div.imgCol{
+    width: 19%;
+    height: 600px;
+    display: inline-block;
+    margin:auto;
+    vertical-align: top;
+    padding: 1px;
+}
+
+div.red > img{
+    background-color: red;
+}
+
+div.blue > img{
+    background-color: blue;
+}

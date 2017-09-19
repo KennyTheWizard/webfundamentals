@@ -1,0 +1,149 @@
+
+Kenn@LAPTOP-GIC6FL6E MINGW64 ~
+$ cd desktop
+
+Kenn@LAPTOP-GIC6FL6E MINGW64 ~/desktop
+$ mkdir gittest
+
+Kenn@LAPTOP-GIC6FL6E MINGW64 ~/desktop
+$ cd gittest
+
+Kenn@LAPTOP-GIC6FL6E MINGW64 ~/desktop/gittest
+$ git init
+Initialized empty Git repository in C:/Users/Kenn/Desktop/gittest/.git/
+
+Kenn@LAPTOP-GIC6FL6E MINGW64 ~/desktop/gittest (master)
+$ touch index.html
+
+Kenn@LAPTOP-GIC6FL6E MINGW64 ~/desktop/gittest (master)
+$ touch styles.css
+
+Kenn@LAPTOP-GIC6FL6E MINGW64 ~/desktop/gittest (master)
+$ touch aboutMe.txt
+
+Kenn@LAPTOP-GIC6FL6E MINGW64 ~/desktop/gittest (master)
+$ git commit
+On branch master
+
+Initial commit
+
+Untracked files:
+        aboutMe.txt
+        index.html
+        styles.css
+
+nothing added to commit but untracked files present
+
+Kenn@LAPTOP-GIC6FL6E MINGW64 ~/desktop/gittest (master)
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        aboutMe.txt
+        index.html
+        styles.css
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Kenn@LAPTOP-GIC6FL6E MINGW64 ~/desktop/gittest (master)
+$ git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+
+Kenn@LAPTOP-GIC6FL6E MINGW64 ~/desktop/gittest (master)
+$ git add index.html
+
+Kenn@LAPTOP-GIC6FL6E MINGW64 ~/desktop/gittest (master)
+$ git add *
+
+Kenn@LAPTOP-GIC6FL6E MINGW64 ~/desktop/gittest (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   aboutMe.txt
+        new file:   index.html
+        new file:   styles.css
+
+
+Kenn@LAPTOP-GIC6FL6E MINGW64 ~/desktop/gittest (master)
+$ git commit "added files"
+error: pathspec 'added files' did not match any file(s) known to git.
+
+Kenn@LAPTOP-GIC6FL6E MINGW64 ~/desktop/gittest (master)
+$ git commit -m "added files"
+[master (root-commit) d5f0887] added files
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 aboutMe.txt
+ create mode 100644 index.html
+ create mode 100644 styles.css
+
+Kenn@LAPTOP-GIC6FL6E MINGW64 ~/desktop/gittest (master)
+$ ls
+aboutMe.txt  index.html  styles.css
+
+Kenn@LAPTOP-GIC6FL6E MINGW64 ~/desktop/gittest (master)
+$ git commit -m "updated aboutMe"
+On branch master
+Changes not staged for commit:
+        modified:   aboutMe.txt
+
+no changes added to commit
+
+Kenn@LAPTOP-GIC6FL6E MINGW64 ~/desktop/gittest (master)
+$ git add aboutMe.txt
+
+Kenn@LAPTOP-GIC6FL6E MINGW64 ~/desktop/gittest (master)
+$ git commit -m "updated aboutMe"
+[master b0012ba] updated aboutMe
+ 1 file changed, 1 insertion(+)
+
+Kenn@LAPTOP-GIC6FL6E MINGW64 ~/desktop/gittest (master)
+$ git add aboutMe.txt
+
+Kenn@LAPTOP-GIC6FL6E MINGW64 ~/desktop/gittest (master)
+$ git commit -m 'added favorite movie to aboutMe'
+[master ac5fb15] added favorite movie to aboutMe
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Kenn@LAPTOP-GIC6FL6E MINGW64 ~/desktop/gittest (master)
+$ git log
+commit ac5fb1503b3fd0e9a85f841dd43ab29a8c66b13a (HEAD -> master)
+Author: KennyTheWizard <kenngineering@gmail.com>
+Date:   Tue Sep 19 09:01:09 2017 -0500
+
+    added favorite movie to aboutMe
+
+commit b0012ba036ae8f11fe0b46fdee2785dad3d3f943
+Author: KennyTheWizard <kenngineering@gmail.com>
+Date:   Tue Sep 19 09:00:00 2017 -0500
+
+    updated aboutMe
+
+commit d5f0887984d667cfb4c8efae7fc6489bde659f3e
+Author: KennyTheWizard <kenngineering@gmail.com>
+Date:   Tue Sep 19 08:58:24 2017 -0500
+
+    added files
+
+Kenn@LAPTOP-GIC6FL6E MINGW64 ~/desktop/gittest (master)
+$ git revert -n HEAD
+
+Kenn@LAPTOP-GIC6FL6E MINGW64 ~/desktop/gittest (master|REVERTING)
+$ git add aboutMe.txt
+
+Kenn@LAPTOP-GIC6FL6E MINGW64 ~/desktop/gittest (master|REVERTING)
+$ git commit -m 'added favorite book'
+[master 2d9adbd] added favorite book
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Kenn@LAPTOP-GIC6FL6E MINGW64 ~/desktop/gittest (master)
+$
