@@ -1,0 +1,8 @@
+#wrapper{
+    width:970px;
+    height: 1000px;
+    background-image: url('images/www-wordstream.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+}
