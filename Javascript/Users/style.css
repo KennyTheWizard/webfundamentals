@@ -1,0 +1,45 @@
+#wrapper{
+/*     width: 70%; */
+    margin: 0 auto;
+}
+
+#userTable{
+    margin: 0 auto;
+}
+
+#userTable{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+#userTable tr{
+    border: 1px solid black;
+}
+#userTable tr th{
+    padding: 5px 10px;
+    text-align: center;
+}
+
+#userTable tr td{
+    padding: 5px 10px;
+    text-align: left;
+}
+
+#formDiv h1{
+    border-bottom: 2px solid gray;
+}
+
+#formDiv{
+    width: 300px;
+    margin: 0 auto;
+}
+
+#inputFormTable{
+    margin-right: 0;
+    margin-left: auto;
+}
+
+#submitBtn{
+    margin-right: 0;
+    margin-left: auto;
+    display: block;
+}

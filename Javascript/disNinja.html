@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            $('#images img').click(function(){
+                $(this).hide();
+            });
+            $('#restore').click(function(){
+                $('#images img').show();
+            });
+        })
+    </script>
+
+    <title>Ninja's Disappear</title>
+</head>
+<body>
+    <div id='images'>
+        <img src="http://libertariannerds.com/wp-content/uploads/2016/11/Wolf.png" alt="Frenzy the Wolfman">
+        <img src="http://libertariannerds.com/wp-content/uploads/2016/11/Wolf.png" alt="Frenzy the Wolfman">
+        <img src="http://libertariannerds.com/wp-content/uploads/2016/11/Wolf.png" alt="Frenzy the Wolfman">
+        <img src="http://libertariannerds.com/wp-content/uploads/2016/11/Wolf.png" alt="Frenzy the Wolfman">
+        <img src="http://libertariannerds.com/wp-content/uploads/2016/11/Wolf.png" alt="Frenzy the Wolfman">
+        <img src="http://libertariannerds.com/wp-content/uploads/2016/11/Wolf.png" alt="Frenzy the Wolfman">
+        <img src="http://libertariannerds.com/wp-content/uploads/2016/11/Wolf.png" alt="Frenzy the Wolfman">
+        <img src="http://libertariannerds.com/wp-content/uploads/2016/11/Wolf.png" alt="Frenzy the Wolfman">
+    </div>
+    <button id='restore'>Restore the images.</button>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#clicktest button').click(function(){
+          window.open("https://www.google.com/");
+        });
+        $('#hidetest').click(function(){
+          $('#hidetest').hide();
+        });
+        $('#show').click(function(){
+          $('#hidetest').show();
+        });
+        $('#slidetoggle button').click(function(){
+          $('#slidetoggle img').slideToggle('slow');
+        });
+        $('#append button').click(function(){
+          $('#append').append('<img src="lokitty.png" alt="This is Loki Cat.">');
+        });
+        $('#toggleTest button').click(function(){
+          $('#toggleTest p').toggle('slow');
+        });
+        $('#slideDown').click(function(){
+          $('#effectsTest').slideDown('slow');
+        });
+        $('#slideUp').click(function(){
+          $('#effectsTest').slideUp('fast');
+        });
+        $('#fadeIn').click(function(){
+          $('#effectsTest').fadeIn('fast');
+        });
+        $('#fadeOut').click(function(){
+          $('#effectsTest').fadeOut('fast');
+        });           
+      })
+
+    </script>
+  </head>
+  <body>
+    <div id='clicktest'>
+      <button type="button" name="button">Open Google in a New Window</button>
+    </div>
+    <div id='hidetest'>
+      <p>This is what we will hide.</p>
+      <h1>hide this too</h1>
+    </div>
+    <button id='show' type="button" name="button">Show what is hidden.</button>
+    <div id='slidetoggle'>
+      <button type="button" name="button">Slide this image</button>
+      <img src="wylie.jpg" alt="this is Wylie Coyote">
+    </div>
+    <div id='append'>
+      <button type="button" name="button">Append Lokitty</button>
+      <p>This is a paragraph. Paragraphs are cool. I like paragraphs.</p>
+    </div>
+    <div id='toggleTest'>
+      <button  type="button" name="button">This is a toggle button</button>
+      <p>This is what will toggle between show and hide.</p>
+    </div>
+    <img id='effectsTest' src="http://libertariannerds.com/wp-content/uploads/2016/10/wizardAnimated.gif" alt="Animated Wizard">
+    <div>
+      <button id='slideDown'>Slide Down to Show</button>
+      <button id='slideUp'>Slide up to hide</button>
+      <button id='fadeIn'>Fade in to Show</button>
+      <button id='fadeOut'>Fade out to hide</button>
+    </div>
+
+
+
+
+  </body>
+</html>
