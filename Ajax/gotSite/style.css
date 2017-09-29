@@ -1,0 +1,15 @@
+#housePics img{
+    width: 24%;
+    display: inline-block;
+}
+
+td{
+    padding: 0px 25px;
+    vertical-align: text-top;
+    
+}
+
+/* td h2{
+    margin-top: 0px;
+
+} */

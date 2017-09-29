@@ -15,9 +15,11 @@
                 url.replace(" ", "%");
                 url += "&APPID=" + apiKey;
                 
-                console.log(url);
+                /* console.log(url); */
                 $.get(url, function(res) {
-                    console.log(res);// your code here
+                    /* console.log(res);
+                     */
+                    // your code here
                     var tempK = res.main.temp;
                     var tempF = Math.round((tempK - 273.15) * 9 / 5 + 32);
                     city = res.name;

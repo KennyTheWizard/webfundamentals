@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+    function camelToHeading(str){
+        var newString = str[0].toUpperCase();
+        for (var index = 1; index < str.length; index++) {
+            var element = str[index];
+            if (element == element.toUpperCase()){
+                newString+= ' ';
+            }
+            newString += element;
+        }
+        return newString + ":";
+    }
+    $(document).ready(function(){
+
+        // lannister 229
+        // stark 362
+        // targaryen 378
+        // Baratheon 15
+    
+
+/*     for (var index = 1; index < 378; index++) {
+        $.get('https://anapioficeandfire.com/api/houses/' + index,function(res){
+            if (res.name.includes("Lannister")){
+                console.log(res);
+            }
+            
+        }, 'json')
+    }; */
+
+        $('#housePics img').click(function(){
+            $.get('https://anapioficeandfire.com/api/houses/'+ $(this).attr('data-alt'),function(res){
+                var infoHTML = "";
+//                console.log(res);
+                for (keys in res){
+                    var value = res[keys];
+//                    console.log(keys, value);
+                    infoHTML += '<tr>';
+                    infoHTML += `<td><h2>${camelToHeading(keys)}</h2></td>`
+//                    console.log(typeof(value));
+                    if (typeof(value) == "object"){
+                        infoHTML += '<td><ul class="tableList">';
+                        for (var index = 0; index < value.length; index++) {
+                            infoHTML += `<li>${value[index]}</li>`;
+                        }
+                        infoHTML += '</ul></td>';
+                    }else{
+                        infoHTML += `<td>${value}</td>`;
+                    }
+                    infoHTML += '</tr>';
+                    
+                }
+
+                $('#datatable').html(infoHTML);
+            }, 'json');
+        });
+    })
+
+    </script>
+    <title>Game of Thrones</title>
+
+</head>
+<body>
+    <div id="wrapper">
+        <div id=housePics>
+            <img src="img/stark.jpg" alt="Stark" data-alt="362">
+            <img src="img/targaryen.jpg" alt="Stark" data-alt="378">
+            <img src="img/lannister.jpg" alt="Stark" data-alt="229">
+            <img src="img/baratheon.png" alt="Stark" data-alt="15">
+        </div>
+        <fieldset id="infoBox">
+            <legend>House Details</legend>
+            <table id="datatable">
+
+            </table>
+        </fieldset>
+    </div>
+</body>
+</html>
