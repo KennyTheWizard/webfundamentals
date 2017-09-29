@@ -3,8 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-
-    <title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        // stolen from the online solution then adapted to my html structure
+		$(document).ready(function(){
+			$("button").click(function(){
+				//Extract values from input fields
+				var first = $("#firstNameBox").val();
+				var last = $("#lastNameBox").val();
+				var desc = $("#descBox").val();
+				//Append dynamically created div to DOM
+				$("#rightContacts").append("<div class = 'card'><h1>" + first + " " + last+"</h1><p class = 'back'> " + desc +"</p></div>");
+                $(".back").hide();
+                //Clear form fields by setting their value to empty
+				$("#firstNameBox").val("");
+				$("#lastNameBox").val("");
+				$("#descBox").val("");
+				//Return false to prevent refresh
+				return false;
+			});
+			
+			$(document).on('click', '.card', function(){
+				//Toggle the #cards' childrens' display property
+				$(this).children().toggle();
+			});
+		});
+	</script>
+    <title>Contact Card</title>
 </head>
 <body>
     <div id='wrapper'>
@@ -21,7 +46,8 @@
                     </tr>
                 </table>
                 <h1>Description:</h1>
-                <textarea name="description" id="descBox"></textarea>                  
+                <textarea name="description" id="descBox"></textarea>
+                <button>Submit</button>                  
             </form>
         </div>
         <div id='rightContacts'>
